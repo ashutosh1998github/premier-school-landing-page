@@ -1,0 +1,156 @@
+/* ================= MUST VISIT SECTION ================= */
+
+.pse-exhibition {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(3rem, 0vw, 6rem) 0 clamp(6rem, 12vw, 12rem);
+}
+
+/* Background image only */
+.pse-exhibition__bg {
+  position: absolute;
+  inset: 0;
+  background: url("/assets/images/BG.png") center / cover no-repeat;
+  z-index: -3;
+}
+
+/* Decorative curve */
+.pse-exhibition__curve {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Container */
+.pse-exhibition__container {
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Title */
+.pse-exhibition__title {
+    font-weight: 600;
+    text-align: center;
+    color: #ffffff;
+    font-size: clamp(1.5rem, 3vw, 2.4rem);
+    margin-bottom: clamp(2rem, 4vw, 3rem);
+}
+/* ================= CARD SIZE SYSTEM ================= */
+
+/*
+  One source of truth for card size.
+  Width = Height (perfect square).
+*/
+:root {
+  --pse-card-size-desktop: min(23vw, 320px);
+  --pse-card-size-tablet: min(46vw, 300px);
+  --pse-card-size-mobile: min(78vw, 280px);
+}
+
+/* ================= SLIDER (ALL SCREENS) ================= */
+
+.pse-exhibition__slider {
+  display: flex;
+  gap: clamp(1rem, 2vw, 1.5rem);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding-bottom: clamp(2rem, 4vw, 3rem);
+}
+
+.pse-exhibition__slider::-webkit-scrollbar {
+  display: none;
+}
+
+/* ================= CARD ================= */
+
+.pse-exhibition__card {
+  flex: 0 0 auto;
+
+  width: var(--pse-card-size-desktop);
+  height: var(--pse-card-size-desktop);
+
+  background: linear-gradient(
+    59.05deg,
+    #DDBFFF 0.39%,
+    #EDDDFF 93.5%
+  );
+
+  border-radius: 1.5rem;
+  padding: clamp(1.2rem, 2vw, 2rem);
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  scroll-snap-align: start;
+}
+
+/* Icon */
+.pse-exhibition__icon {
+  width: clamp(36px, 4vw, 48px);
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+/* Typography (stable + responsive) */
+.pse-exhibition__card-title {
+  font-size: clamp(16px, 1.4vw, 22px);
+  line-height: 1.25;
+  margin-bottom: 0.5rem;
+}
+
+.pse-exhibition__card-text {
+  font-size: clamp(13px, 1.2vw, 18px);
+  line-height: 1.5;
+  max-width: 95%;
+}
+
+/* ================= TABLET ================= */
+
+@media (max-width: 1199px) {
+  .pse-exhibition__card {
+    width: var(--pse-card-size-tablet);
+    height: var(--pse-card-size-tablet);
+  }
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 767px) {
+  .pse-exhibition__card {
+    width: var(--pse-card-size-mobile);
+    height: var(--pse-card-size-mobile);
+  }
+
+  /* Hide arrow controls on mobile */
+  .pse-exhibition__controls {
+    display: none;
+  }
+}
+
+/* ================= CONTROLS ================= */
+
+.pse-exhibition__controls {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.pse-exhibition__arrow {
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: clamp(40px, 4vw, 52px);
+  height: clamp(40px, 4vw, 52px);
+}
+
+.pse-exhibition__arrow img {
+  width: 100%;
+  height: auto;
+}

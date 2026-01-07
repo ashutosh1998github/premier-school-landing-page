@@ -1,0 +1,136 @@
+/* =========================================================
+   LAYOUT CSS
+   - Page structure
+   - Section spacing
+   - Grid / Flex foundations
+   ========================================================= */
+
+/* -----------------------------
+   GLOBAL CONTAINERS
+-------------------------------- */
+.site-header__container,
+.site-footer,
+.hero-slider__viewport,
+.participating-schools,
+.choose-school,
+.exhibition {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: var(--space-2);
+}
+
+/* -----------------------------
+   HEADER
+-------------------------------- */
+.site-header {
+  background-color: var(--color-white);
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.site-header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 72px;
+}
+
+.site-header__menu {
+  display: flex;
+  gap: var(--space-3);
+}
+
+/* -----------------------------
+   MAIN SECTIONS (VERTICAL RHYTHM)
+-------------------------------- */
+main > section {
+  padding-block: var(--space-5);
+}
+
+/* -----------------------------
+   HERO SECTION
+-------------------------------- */
+.hero-slider {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-slider__viewport {
+  display: grid;
+  align-items: center;
+  min-height: calc(100vh - 72px);
+}
+
+.hero-slider__track {
+  display: flex;
+  transition: transform var(--transition-medium);
+}
+
+.hero-slider__slide {
+  min-width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+/* -----------------------------
+   PARTICIPATING SCHOOLS
+-------------------------------- */
+.participating-schools {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.participating-schools__marquee {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* -----------------------------
+   CHOOSE SCHOOL SECTION
+-------------------------------- */
+.choose-school {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.choose-school__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-3);
+}
+
+.choose-school__slider {
+  display: none;
+}
+
+/* -----------------------------
+   EXHIBITION SECTION
+-------------------------------- */
+.exhibition {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.exhibition__viewport {
+  overflow: hidden;
+}
+
+.exhibition__track {
+  display: flex;
+  gap: var(--space-3);
+  transition: transform var(--transition-medium);
+}
+
+.exhibition__slide {
+  min-width: 33.333%;
+}
+
+/* -----------------------------
+   FOOTER
+-------------------------------- */
+.site-footer {
+  padding-block: var(--space-3);
+  text-align: center;
+  border-top: 1px solid #e5e7eb;
+}

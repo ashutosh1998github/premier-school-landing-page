@@ -1,0 +1,264 @@
+/* =========================================================
+   COMPONENTS CSS
+   - Cards
+   - Buttons
+   - Slider UI
+   - Reusable blocks
+   ========================================================= */
+
+/* -----------------------------
+   HEADER
+-------------------------------- */
+.site-header__logo {
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: var(--color-primary);
+}
+
+.site-header__menu a {
+  font-weight: 500;
+  color: var(--color-text);
+  transition: color var(--transition-fast);
+}
+
+.site-header__menu a:hover,
+.site-header__menu a:focus-visible {
+  color: var(--color-primary);
+}
+
+/* -----------------------------
+   HERO SLIDER
+-------------------------------- */
+.hero-slider__content {
+  max-width: 520px;
+}
+
+.hero-slider__title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--color-primary);
+}
+
+.hero-slider__subtitle {
+  font-size: 1.125rem;
+  color: var(--color-muted);
+}
+
+.hero-slider__media {
+  width: 100%;
+  height: 320px;
+  background-color: #e5e7eb;
+  border-radius: var(--radius-lg);
+}
+
+/* HERO CONTROLS */
+.hero-slider__controls {
+  position: absolute;
+  bottom: var(--space-3);
+  left: var(--space-3);
+  display: flex;
+  gap: var(--space-2);
+}
+
+.hero-slider__btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--color-white);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform var(--transition-fast),
+              box-shadow var(--transition-fast);
+}
+
+.hero-slider__btn:hover,
+.hero-slider__btn:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* -----------------------------
+   PARTICIPATING SCHOOLS
+-------------------------------- */
+.participating-schools__title {
+  text-align: center;
+  color: var(--color-primary);
+}
+
+.participating-schools__list {
+  display: inline-flex;
+  gap: var(--space-4);
+}
+
+.participating-schools__item {
+  min-width: 120px;
+  height: 60px;
+  background-color: var(--color-white);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* -----------------------------
+   SCHOOL CARD
+-------------------------------- */
+.school-card {
+  background-color: var(--color-white);
+  padding: var(--space-3);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform var(--transition-fast),
+              box-shadow var(--transition-fast);
+}
+
+.school-card:hover,
+.school-card:focus-within {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.school-card__title {
+  font-size: 1.25rem;
+  color: var(--color-primary);
+}
+
+.school-card__description {
+  font-size: 0.95rem;
+  color: var(--color-muted);
+}
+
+/* -----------------------------
+   CHOOSE SCHOOL SLIDER (MOBILE)
+-------------------------------- */
+.choose-school__slide {
+  background-color: var(--color-white);
+  padding: var(--space-3);
+  border-radius: var(--radius-lg);
+}
+
+/* -----------------------------
+   EXHIBITION
+-------------------------------- */
+.exhibition__title {
+  text-align: center;
+  color: var(--color-primary);
+}
+
+.exhibition-card {
+  background-color: var(--color-white);
+  padding: var(--space-3);
+  border-radius: var(--radius-lg);
+  height: 100%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.exhibition-card__title {
+  font-size: 1.125rem;
+  color: var(--color-primary);
+}
+
+.exhibition-card__description {
+  font-size: 0.95rem;
+  color: var(--color-muted);
+}
+
+/* -----------------------------
+   FOOTER
+-------------------------------- */
+.site-footer__text {
+  font-size: 0.875rem;
+  color: var(--color-muted);
+}
+
+/* =========================================================
+   HERO SECTION (DESKTOP)
+   ========================================================= */
+
+.hero {
+  background: linear-gradient(89.72deg, #000E38 0.22%, #3F186A 52.52%);
+  color: #fff;
+}
+
+.hero__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 720px;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 3rem;
+  padding: 4rem 2rem;
+}
+
+.hero__title {
+  font-size: 3rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.hero__title span {
+  color: #f7c77d;
+}
+
+.hero__subtitle {
+  margin-top: 0.5rem;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+}
+
+.hero__event {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  background: #f7c77d;
+  color: #1a1a1a;
+  border-radius: 40px;
+  padding: 1rem 1.5rem;
+  max-width: fit-content;
+}
+
+.hero__event-left,
+.hero__event-right {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+}
+
+.hero__event-divider {
+  width: 1px;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.3);
+  margin: 0 1.5rem;
+}
+
+/* VISUAL */
+.hero__visual {
+  position: relative;
+}
+
+.hero__banner {
+  width: 100%;
+  border-radius: 28px;
+}
+
+/* FLOATING IMAGES */
+.hero__float {
+  position: absolute;
+  width: 120px;
+  animation: floatUp 6s ease-in-out infinite;
+}
+
+.hero__float--1 { left: -40px; bottom: -20px; animation-delay: 0s; }
+.hero__float--2 { left: 20%; bottom: -40px; animation-delay: 1s; }
+.hero__float--3 { right: 20%; bottom: -30px; animation-delay: 2s; }
+.hero__float--4 { right: -40px; bottom: -10px; animation-delay: 3s; }
+.hero__float--5 { left: 10%; bottom: -60px; animation-delay: 1.5s; }
+.hero__float--6 { right: 10%; bottom: -50px; animation-delay: 2.5s; }
+.hero__float--7 { left: 45%; bottom: -70px; animation-delay: 3.5s; }
+
+@keyframes floatUp {
+  0%   { transform: translateY(0); opacity: 0; }
+  20%  { opacity: 1; }
+  50%  { transform: translateY(-40px); }
+  100% { transform: translateY(0); opacity: 0; }
+}

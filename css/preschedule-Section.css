@@ -1,0 +1,200 @@
+/* =========================================================
+   PRE-SCHEDULE YOUR SCHOOL APPOINTMENTS SECTION
+   ========================================================= */
+
+/* ROOT SECTION */
+.pre-schedule {
+  width: 100%;
+  background: #ffffff;
+}
+
+/* WRAPPER */
+.pre-schedule__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 520px;
+  width: 100%;
+  position: relative;
+}
+
+/* =========================================================
+   LEFT CONTENT SECTION
+   ========================================================= */
+.pre-schedule__content {
+  padding: 100px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  /* EXACT DESIGNER GRADIENT */
+  background: linear-gradient(
+    270deg,
+    #EAD7FF 45.09%,
+    #DEC1FF 100%
+  );
+
+  z-index: 2;
+}
+
+.pre-schedule__eyebrow {
+  font-size: clamp(24px, 2.4vw, 57px);
+  font-weight: 400;
+  color: #8a63d2;
+  margin-bottom: 16px;
+  font-style: italic;
+}
+
+
+.pre-schedule__title {
+  font-size: clamp(42px, 4.6vw, 110px);
+  line-height: 1.15;
+  color: #2b1b4d;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+
+.pre-schedule__subtitle {
+  font-size: clamp(22px, 2.2vw, 53px);
+  color: #8a63d2;
+  margin-bottom: 32px;
+  font-style: italic;
+}
+
+
+/* =========================================================
+   CTA BUTTON
+   ========================================================= */
+
+.pre-schedule__cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 45px;
+    font-size: 20px;
+    border-radius: 5px;
+    padding: 0px 45px 0px 0px;
+    border: 3px solid #2b1b4d;
+    color: #2b1b4d;
+    font-weight: bold;
+    text-decoration: none;
+    width: fit-content;
+    transition: all 0.3s ease;
+}
+
+.pre-schedule__cta-icon {
+    width: 80px;
+    height: 80px;
+    background: #2b1b4d;
+    color: #ffffff;
+    display: grid;
+    font-weight: lighter;
+    place-items: center;
+    font-size: 40px;
+    transition: transform 0.3s ease;
+}
+
+.pre-schedule__cta:hover {
+  background: #2b1b4d;
+  color: #ffffff;
+}
+
+.pre-schedule__cta:hover .pre-schedule__cta-icon {
+  transform: translateX(4px);
+}
+
+/* =========================================================
+   RIGHT IMAGE SECTION
+   ========================================================= */
+.pre-schedule__image {
+  position: relative;
+  overflow: hidden;
+}
+
+.pre-schedule__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.pre-schedule__media {
+  position: relative;
+  overflow: hidden;
+}
+
+/* =========================================================
+   MIDDLE BLEND GRADIENT (CRITICAL PART)
+   ========================================================= */
+.pre-schedule__image::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  /* EXACT GRADIENT PROVIDED */
+  background: linear-gradient(
+    90deg,
+    #EAD7FF 0%,
+    rgba(234, 215, 255, 0) 25%
+  );
+
+  /* Horizontal masking to blend from left */
+  -webkit-mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 1) 65%,
+    rgba(0, 0, 0, 0) 100%
+  );
+
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 1) 65%,
+    rgba(0, 0, 0, 0) 100%
+  );
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+@media (max-width: 1024px) {
+  .pre-schedule__content {
+    padding: 80px 50px;
+  }
+
+  /* .pre-schedule__title {
+    font-size: 40px;
+  } */
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+@media (max-width: 768px) {
+  .pre-schedule__wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .pre-schedule__content {
+    padding: 60px 24px;
+  }
+
+  /* .pre-schedule__title {
+    font-size: 34px;
+  } */
+
+  .pre-schedule__image {
+    height: 360px;
+  }
+
+  /* Simplified vertical blend for mobile */
+  .pre-schedule__image::before {
+    background: linear-gradient(
+      180deg,
+      #EAD7FF 0%,
+      rgba(234, 215, 255, 0) 60%
+    );
+
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+}
