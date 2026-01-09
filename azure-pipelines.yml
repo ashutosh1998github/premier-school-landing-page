@@ -10,8 +10,8 @@ pool:
   name: default
 
 steps:
-- script: exit 1
-  displayName: 'Force Failure'
+- script: echo "hello Azure Pipeline!"
+  displayName: 'run one-line script'
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
